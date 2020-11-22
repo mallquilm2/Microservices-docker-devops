@@ -1,0 +1,31 @@
+#parent project
+/target/
+/.settings/
+/.classpath
+/.project
+.DS_Store
+
+#child projects
+/businessdomain/target/
+/businessdomain/.settings/
+/businessdomain/.classpah
+/businessdomain/.project
+/businessdomain/.DS_Store
+
+/businessdomain/customer/target/
+/businessdomain/customer/.settings/
+/businessdomain/customer/.classpah
+/businessdomain/customer/.project
+/businessdomain/customer/.DS_Store
+
+/businessdomain/products/target/
+/businessdomain/products/.settings/
+/businessdomain/products/.classpah
+/businessdomain/products/.project
+/businessdomain/products/.DS_Store
+
+/businessdomain/transactions/target/
+/businessdomain/transactions/.settings/
+/businessdomain/transactions/.classpah
+/businessdomain/transactions/.project
+/businessdomain/transactions/.DS_Store
