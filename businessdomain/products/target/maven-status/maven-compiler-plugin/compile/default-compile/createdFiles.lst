@@ -1,0 +1,4 @@
+com/paymentchain/products/repository/ProductRepository.class
+com/paymentchain/products/controller/ProductRestController.class
+com/paymentchain/products/entities/Product.class
+com/paymentchain/products/ProductsApplication.class
