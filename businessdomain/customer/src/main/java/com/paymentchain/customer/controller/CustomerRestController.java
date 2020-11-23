@@ -77,9 +77,9 @@ public class CustomerRestController {
     
     private <T> List<T> getTransacctions(String accountIban) {
         WebClient client = webClientBuilder.clientConnector(new ReactorClientHttpConnector(HttpClient.from(tcpClient)))
-                .baseUrl("http://localhost:8082/transaction")
+                .baseUrl("http://businessdomain-transactions/transaction")
                 .defaultHeader(HttpHeaders.CONTENT_TYPE, MediaType.APPLICATION_JSON_VALUE)
-                .defaultUriVariables(Collections.singletonMap("url", "http://localhost:8082/transaction"))
+                .defaultUriVariables(Collections.singletonMap("url", "http://businessdomain-transactions/transaction"))
                 .build();        
         List<Object> block = client.method(HttpMethod.GET).uri(uriBuilder -> uriBuilder
                 .path("/transactions")
@@ -93,9 +93,9 @@ public class CustomerRestController {
     
     private  String getProductName(long id) {
         WebClient client = webClientBuilder.clientConnector(new ReactorClientHttpConnector(HttpClient.from(tcpClient)))
-                .baseUrl("http://localhost:8083/product")
+                .baseUrl("http://businessdomain-product/product")
                 .defaultHeader(HttpHeaders.CONTENT_TYPE, MediaType.APPLICATION_JSON_VALUE)
-                .defaultUriVariables(Collections.singletonMap("url", "http://localhost:8083/product"))
+                .defaultUriVariables(Collections.singletonMap("url", "http://businessdomain-product/product"))
                 .build();        
         JsonNode block = client.method(HttpMethod.GET).uri("/"+id)
                 .retrieve().bodyToMono(JsonNode.class).block(); 

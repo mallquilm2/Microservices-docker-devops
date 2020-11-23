@@ -35,4 +35,7 @@
         </dependencies>
     </dependencyManagement>
     
+    <modules>
+    	<module>eurekaserver</module>
+    </modules>
 </project>

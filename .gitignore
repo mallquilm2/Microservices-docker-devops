@@ -1,17 +1,25 @@
-#parent project
+###########parent project############
 /target/
 /.settings/
 /.classpath
 /.project
 .DS_Store
 
-#child projects
+## businessdomain module
 /businessdomain/target/
 /businessdomain/.settings/
 /businessdomain/.classpah
 /businessdomain/.project
 /businessdomain/.DS_Store
 
+## infraesctructuradomain module
+/infraesctructuradomain/target/
+/infraesctructuradomain/.settings/
+/infraesctructuradomain/.classpah
+/infraesctructuradomain/.project
+/infraesctructuradomain/.DS_Store
+
+## businessdomain's childs
 /businessdomain/customer/target/
 /businessdomain/customer/.settings/
 /businessdomain/customer/.classpah
@@ -29,3 +37,10 @@
 /businessdomain/transactions/.classpah
 /businessdomain/transactions/.project
 /businessdomain/transactions/.DS_Store
+
+## infraesctruturadomain's childs
+/infraesctructuradomain/eurekaserver/target/
+/infraesctructuradomain/eurekaserver/.settings/
+/infraesctructuradomain/eurekaserver/.classpah
+/infraesctructuradomain/eurekaserver/.project
+/infraesctructuradomain/eurekaserver/.DS_Store
