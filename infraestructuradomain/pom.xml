@@ -38,5 +38,6 @@
     <modules>
     	<module>eurekaserver</module>
     	<module>adminserver</module>
+    	<module>configserver</module>
     </modules>
 </project>

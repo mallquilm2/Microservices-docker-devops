@@ -44,3 +44,9 @@
 /infraesctructuradomain/eurekaserver/.classpah
 /infraesctructuradomain/eurekaserver/.project
 /infraesctructuradomain/eurekaserver/.DS_Store
+
+/infraesctructuradomain/configserver/target/
+/infraesctructuradomain/configserver/.settings/
+/infraesctructuradomain/configserver/.classpah
+/infraesctructuradomain/configserver/.project
+/infraesctructuradomain/configserver/.DS_Store
