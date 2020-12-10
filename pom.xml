@@ -140,8 +140,9 @@
                         </goals>
                     </execution>
                 </executions>
-            </plugin>        
-            <!--   <plugin>
+            </plugin> 
+            <!--  -->       
+               <plugin>
                 <groupId>com.spotify</groupId>
                 <artifactId>dockerfile-maven-plugin</artifactId>
                 <version>${dockerfile-maven-version}</version>                               
@@ -149,20 +150,21 @@
                     <execution>                        
                         <id>build-docker-image</id>
                         <phase>package</phase>
-                        <goals>                                              
+                        <goals>                                            	  
                             <goal>build</goal>
                            <goal>push</goal>
                         </goals>
                     </execution>
                 </executions>
                 <configuration>                       
-                    <repository>digitalthinking/microservice-docker-${project.artifactId}</repository>
+                    <repository>paymentchain/microservice-docker-${project.artifactId}</repository>
                     <tag>${project.version}</tag>
                     <buildArgs>
                         <JAR_FILE>${project.build.finalName}.jar</JAR_FILE>
                     </buildArgs>
+                    <!-- <skip>true</skip> -->
                 </configuration>
-            </plugin>-->  
+            </plugin> 
             
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
