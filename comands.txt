@@ -1,0 +1,47 @@
+Orden de compilación:
+1.eurekaserver
+2.configserver
+3.businessdomain
+
+Imagenes
+---------
+*Crear imagen docker con maven
+mvn clean package docker:build
+mvn docker:build
+
+
+
+*Listar imágenes
+docker image ls
+
+
+Contenedores
+---------------
+*Muestra todos los contenedores:
+docker-compose top
+
+*Parar todos los contenedores:
+docker-compose stop
+
+*Remover todos los contenedores:
+docker-compose rm
+
+*Remover todos los contenedores con sus volúmenes, forzando si están en ejecución:
+docker rm -vf $(docker ps -a -q)
+
+*Remover imágenes de docker(después de remover sus contenedores)
+docker rmi -f $(docker images -a -q)
+
+
+*Listar todos los contenedores
+docker ps -a
+
+*Crear los contenedores basado en las imágenes configuradas del fichero yml
+docker-compose up -d --force-recreate
+
+*Iniciar los contenedores(en caso alguno se haya caído):
+docker-compose start
+
+*Ver logs de contenedor:
+docker logs [my_container_name]
+

@@ -10,6 +10,7 @@ import java.util.List;
 import java.util.concurrent.TimeUnit;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpMethod;
 import org.springframework.http.MediaType;
@@ -47,6 +48,9 @@ public class CustomerRestController {
     
     @Autowired
     CustomerRepository customerRepository;
+    
+    @Value("${user.role}")
+    private String role;
   
         private final WebClient.Builder webClientBuilder;
     
@@ -105,9 +109,19 @@ public class CustomerRestController {
     
    
      @GetMapping()
-    public List<Customer> list() {
-        return customerRepository.findAll();
-    }
+     public ResponseEntity<List<Customer>> list() {
+         List<Customer> findAll = customerRepository.findAll();
+         if(findAll == null || findAll.isEmpty()){
+             return ResponseEntity.noContent().build();
+         }else{
+            return ResponseEntity.ok(findAll);
+         }
+     }
+     
+     @GetMapping("/hello")
+     public String sayHello() {
+         return "Hello your role is: "+ role;
+     }
     
     @GetMapping("/{id}")
     public Customer get(@PathVariable long id) {   
